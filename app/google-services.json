@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "565225705162",
+    "firebase_url": "https://surge-f84f4.firebaseio.com",
+    "project_id": "surge-f84f4",
+    "storage_bucket": "surge-f84f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565225705162:android:5cc98c1d89d7408637ee33",
+        "android_client_info": {
+          "package_name": "com.example.surge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565225705162-emunaejgki9u0u4kerialg8t5cuiltqt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.surge",
+            "certificate_hash": "dd4431e3208547d0c75d17014f8bd64e03778f46"
+          }
+        },
+        {
+          "client_id": "565225705162-bqlne2raqh1l9aubtbcselge6dckogov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGnpwFUEid6rh_gDEMHJ-7fp6ArXO2xb4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565225705162-bqlne2raqh1l9aubtbcselge6dckogov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

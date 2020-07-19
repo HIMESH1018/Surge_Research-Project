@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id ="@+id/nav_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+
+    <item
+        android:id ="@+id/nav_safeplaces"
+        android:icon="@drawable/ic_map_black_24dp"
+        android:title="SafePlaces" />
+
+    <item
+        android:id ="@+id/nav_donations"
+        android:icon="@drawable/ic_local_hospital_black_24dp"
+        android:title="Donations" />
+
+
+    <item
+        android:id ="@+id/nav_uploader"
+        android:icon="@drawable/ic_add_a_photo_black_24dp"
+        android:title="Uploader" />
+
+    <item
+        android:id ="@+id/nav_waterlevel"
+        android:icon="@drawable/ic_local_drink_black_24dp"
+        android:title="Water_Level" />
+
+</menu>
