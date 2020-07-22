@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Surge</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_login">Sign Up</string>
+    <string name="Clear">Reset</string>
+    <string name="welcome">"Welcome !"</string>
+
+    <!-- Spinner Province -->
+
+    <string name="title_activity_safeplaces">Map</string>
+    <string name="title_activity_d_location">Map</string>
+    <string-array name="Province">
+
+        <item>Western</item>
+        <item>North Western</item>
+        <item>Uva</item>
+        <item>Northern</item>
+        <item>Southern </item>
+        <item>North Central</item>
+        <item>Central</item>
+        <item>Eastern</item>
+        <item>Sabaragamuwa</item>
+    </string-array>
+
+</resources>

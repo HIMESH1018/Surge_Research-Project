@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "730749485797",
+    "firebase_url": "https://cdap-3d95f.firebaseio.com",
+    "project_id": "cdap-3d95f",
+    "storage_bucket": "cdap-3d95f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730749485797:android:fb39143c4d490d2b49ca0c",
+        "android_client_info": {
+          "package_name": "com.example.surge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730749485797-4mavd1jscsl52s30ck41kcpvfssu4d69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1wGbl-jS-FDrUabI2nm1xB-TygePyF4g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730749485797-4mavd1jscsl52s30ck41kcpvfssu4d69.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
