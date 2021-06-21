@@ -24,7 +24,7 @@ public class SafeplacesMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(SafeplacesMain.this,safeplaces.class);
+                Intent intent = new Intent(SafeplacesMain.this,SafePlace.class);
                 startActivity(intent);
             }
         });

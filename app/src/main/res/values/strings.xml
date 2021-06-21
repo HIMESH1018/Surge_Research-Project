@@ -16,6 +16,7 @@
 
     <string name="title_activity_safeplaces">Map</string>
     <string name="title_activity_d_location">Map</string>
+    <string name="google_map_key">AIzaSyD8tm9amdcL8NdM_nqhIuicH_yh1jw15pE</string>
     <string-array name="Province">
 
         <item>Western</item>
@@ -27,6 +28,14 @@
         <item>Central</item>
         <item>Eastern</item>
         <item>Sabaragamuwa</item>
+    </string-array>
+
+
+    <string-array name="type">
+
+        <item>Admin</item>
+        <item>User</item>
+
     </string-array>
 
 </resources>

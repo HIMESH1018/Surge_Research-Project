@@ -2,24 +2,35 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.surge">
 
-
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_icon_round"
         android:supportsRtl="true"
+        android:name=".Module"
         android:theme="@style/Theme.Design.NoActionBar">
+        <activity android:name=".Upload_show"/>
+        <activity android:name=".SafePlace" />
+        <activity android:name=".AD_Retrive_View" />
+        <activity android:name=".AD_D_Contact" />
+        <activity android:name=".AD_D_Notes" />
+        <activity android:name=".AD_D_Location" />
+        <activity android:name=".AD_Waterlevel" />
+        <activity android:name=".AD_Donation_Main" />
+        <activity android:name=".AD_uploads" />
+        <activity android:name=".AdminHome" />
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-
-        <activity
-            android:name=".D_location"/>
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".Profile_Account" />
+        <activity android:name=".D_location" />
         <activity android:name=".DepartmentContact_Hospital" />
-        <activity
-            android:name=".safeplaces"
-            android:label="@string/title_activity_safeplaces" />
-
         <activity android:name=".Waterlevel" />
         <activity android:name=".ForgetPass" />
         <activity android:name=".MainLogin" />
@@ -30,19 +41,9 @@
         <activity android:name=".departmentContacts" />
         <activity android:name=".donation" />
         <activity android:name=".uploader" />
-        <activity android:name=".Home"/>
+        <activity android:name=".Home" />
+        <activity android:name=".Register" />
 
-
-        <activity android:name=".Register" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
@@ -54,22 +55,17 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"></meta-data>
+                android:resource="@xml/file_paths" />
         </provider>
-
-
-
-
     </application>
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permisson.READ_GSERVICES" />
-
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 

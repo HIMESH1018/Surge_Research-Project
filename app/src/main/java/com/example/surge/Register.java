@@ -2,12 +2,18 @@ package com.example.surge;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.InputType;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,6 +37,7 @@ public class Register extends AppCompatActivity {
 
     EditText username,username2,password,password2,number;
     Button signup;
+    TextView textView32,textView33;
     DatabaseReference dbref;
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firestore;
@@ -50,7 +57,15 @@ public class Register extends AppCompatActivity {
         password2 = findViewById(R.id.password2); // password
         number = findViewById(R.id.number);       //mobile-number
 
+        textView32 = findViewById(R.id.textView32);
+        textView33 = findViewById(R.id.textView33);
+
         signup = findViewById(R.id.signup);
+
+        textView32.setVisibility(View.GONE);
+        textView33.setVisibility(View.GONE);
+        password2.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
@@ -138,15 +153,16 @@ public class Register extends AppCompatActivity {
                                 DocumentReference documentReference = firestore.collection("users").document(userID);
 
                                 Map<String,Object> user = new HashMap<>();
-                                user.put("fName",name);
-                                user.put("email",email);
-                                user.put("phone",phone);
+                                user.put("Name",name);
+                                user.put("Phone",phone);
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
 
 
                                 @Override
                                 public void onSuccess(Void aVoid) {
                                     Log.d(TAG, "onSuccess: user Profile is created for "+ userID);
+                                    Intent intent = new Intent(Register.this,Home.class);
+                                    startActivity(intent);
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
@@ -174,6 +190,83 @@ public class Register extends AppCompatActivity {
 
     });
 
+        password.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                if(password.getText().length() > 0){
+                    textView32.setVisibility(View.VISIBLE);
+                }
+                else{
+                    textView32.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        password2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                if(password2.getText().length() > 0){
+                    textView33.setVisibility(View.VISIBLE);
+                }
+                else{
+                    textView33.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        textView32.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(textView32.getText() == "SHOW"){
+                    textView32.setText("HIDE");
+                    password.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                    password.setSelection(password.length());
+                }
+                else{
+                    textView32.setText("SHOW");
+                    password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                    password.setSelection(password.length());
+                }
+            }
+        });
+
+        textView33.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(textView33.getText() == "SHOW"){
+                    textView33.setText("HIDE");
+                    password2.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                    password2.setSelection(password2.length());
+                }
+                else{
+                    textView33.setText("SHOW");
+                    password2.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                    password2.setSelection(password2.length());
+                }
+            }
+        });
 
     }
 

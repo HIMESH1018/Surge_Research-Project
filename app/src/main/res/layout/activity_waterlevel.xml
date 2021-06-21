@@ -22,7 +22,8 @@
         app:layout_constraintHorizontal_bias="0.876"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.777" />
+        app:layout_constraintVertical_bias="0.777"
+        android:gravity="center_horizontal" />
 
     <Button
         android:id="@+id/reset2"
@@ -116,7 +117,7 @@
         android:background="@drawable/background1"
         android:ems="10"
         android:hint="Water Level"
-        android:inputType="time"
+        android:focusable="false"
         android:textColor="@color/black"
         android:enabled="false"
         android:textColorHint="@color/black"

@@ -10,7 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-class DownloadUrl {
+public class DownloadUrl {
 
     public String readUrl(String myUrl) throws IOException
     {
